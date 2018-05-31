@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cecyred.ww.cecyred.REGISTROUSUARIO"
+    tools:showIn="@layout/activity_registrousuario">
+
+    <EditText
+        android:id="@+id/TXT_NOMBRE"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/TXT_CONTRA"
+        android:layout_width="356dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:ems="10"
+        android:hint="Contraseña:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_NOMBRE"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/TXT_BOLETA"
+        android:layout_width="357dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Boleta:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_CONTRA"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="1dp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimary"
+        android:text="Registrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TXT_BOLETA"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="112dp"
+        android:layout_marginLeft="113dp" />
+</android.support.constraint.ConstraintLayout>

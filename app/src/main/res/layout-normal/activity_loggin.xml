@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cecyred.ww.cecyred.LogginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/Usuario"
+        android:layout_alignRight="@+id/Usuario"
+        android:layout_below="@+id/imageVer"
+        app:srcCompat="@drawable/logocecy1" />
+
+    <ImageView
+        android:id="@+id/imageIngresar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/CR"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:onClick="ingreso"
+        app:srcCompat="@drawable/ingresar1" />
+
+    <ImageView
+        android:id="@+id/imageRegistrar"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/CR"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/registrar1"
+        android:onClick="CambioRegistro"/>
+
+    <ImageView
+        android:id="@+id/imageVer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/solover1"
+        android:onClick="CambioSolover"/>
+
+    <EditText
+        android:id="@+id/Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Contraseña"
+        android:layout_alignLeft="@+id/Contraseña"
+        android:layout_alignStart="@+id/Contraseña"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        android:hint="Introduzca su usuario"/>
+
+    <EditText
+        android:id="@+id/Contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageIngresar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="invisible"
+        android:hint="Introduzca su contraseña"/>
+
+    <ImageView
+        android:id="@+id/CR"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        app:srcCompat="@drawable/logocr1" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Usuario"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
