@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,13 +18,14 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
-    private List<listitem> listItems;
-    private Context context;
+    private ArrayList<listitem> listItems;
 
-    public MyAdapter(List<listitem> listItems, Context context) {
+
+    public MyAdapter(ArrayList<listitem> listItems) {
         this.listItems = listItems;
-        this.context = context;
+
     }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,10 +36,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-           listitem listItemmmm= listItems.get(position);
-
-            holder.textViewHead.setText(listItemmmm.getHead());
-              holder.textViewDesc.setText(listItemmmm.getDesc());
+      holder.textViewHead.setText(listItems.get(position).getHead());
+        holder.textViewDesc.setText(listItems.get(position).getDesc());
     }
 
     @Override
@@ -47,8 +47,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView textViewHead;
-        public TextView textViewDesc;
+        private TextView textViewHead;
+        private TextView textViewDesc;
         public ViewHolder(View itemView) {
             super(itemView);
 
